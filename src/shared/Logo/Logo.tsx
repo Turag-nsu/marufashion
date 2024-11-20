@@ -1,6 +1,7 @@
 import React from "react";
-import logoImg from "@/images/logo.svg";
-import logoLightImg from "@/images/logo-light.svg";
+// import logoImg from "@/images/logo.svg";
+import logoImg from "@/images/web_logo.png";
+import logoLightImg from "@/images/web_logo.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,11 +34,11 @@ const Logo: React.FC<LogoProps> = ({
           priority
         />
       ) : (
-        "Logo Here"
+        "Maru Fashion"
       )}
       {imgLight && (
         <Image
-          className="hidden h-8 sm:h-10 w-auto dark:block"
+          className="hidden h-8 sm:h-10 w-auto dark:block invert"
           src={imgLight}
           alt="Logo-Light"
           sizes="200px"
