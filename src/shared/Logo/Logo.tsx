@@ -38,7 +38,7 @@ const Logo: React.FC<LogoProps> = ({
       )}
       {imgLight && (
         <Image
-          className="hidden h-8 sm:h-10 w-auto dark:block invert"
+          className="hidden h-auto w-auto dark:block invert"
           src={imgLight}
           alt="Logo-Light"
           sizes="200px"
