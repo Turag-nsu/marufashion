@@ -115,14 +115,14 @@ const ProductDetailPage = () => {
               <span className="ml-1 font-semibold">{sizeSelected}</span>
             </span>
           </label>
-          <a
+          {/* <a
             target="_blank"
             rel="noopener noreferrer"
             href="##"
             className="text-primary-6000 hover:text-primary-500"
           >
             See sizing chart
-          </a>
+          </a> */}
         </div>
         <div className="grid grid-cols-5 sm:grid-cols-7 gap-2 mt-3">
           {allOfSizes.map((size, index) => {
@@ -216,7 +216,7 @@ const ProductDetailPage = () => {
 
             <div className="h-7 border-l border-slate-300 dark:border-slate-700"></div>
 
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <a
                 href="#reviews"
                 className="flex items-center text-sm font-medium"
@@ -235,16 +235,16 @@ const ProductDetailPage = () => {
                 <SparklesIcon className="w-3.5 h-3.5" />
                 <span className="ml-1 leading-none">{status}</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* ---------- 3 VARIANTS AND SIZE LIST ----------  */}
-        <div className="">{renderVariants()}</div>
+        {/* <div className="">{renderVariants()}</div> */}
         <div className="">{renderSizeList()}</div>
 
         {/*  ---------- 4  QTY AND ADD TO CART BUTTON */}
-        <div className="flex space-x-3.5">
+        {/* <div className="flex space-x-3.5">
           <div className="flex items-center justify-center bg-slate-100/70 dark:bg-slate-800/70 px-2 py-3 sm:p-3.5 rounded-full">
             <NcInputNumber
               defaultValue={qualitySelected}
@@ -258,14 +258,14 @@ const ProductDetailPage = () => {
             <BagIcon className="hidden sm:inline-block w-5 h-5 mb-0.5" />
             <span className="ml-3">Add to cart</span>
           </ButtonPrimary>
-        </div>
+        </div> */}
 
         {/*  */}
         <hr className=" 2xl:!my-10 border-slate-200 dark:border-slate-700"></hr>
         {/*  */}
 
         {/* ---------- 5 ----------  */}
-        <AccordionInfo />
+        {/* <AccordionInfo /> */}
 
         {/* ---------- 6 ----------  */}
         <div className="hidden xl:block">
@@ -376,9 +376,9 @@ const ProductDetailPage = () => {
                   alt="product detail 1"
                 />
               </div>
-              {renderStatus()}
+              {/* {renderStatus()} */}
               {/* META FAVORITES */}
-              <LikeButton className="absolute right-3 top-3 " />
+              {/* <LikeButton className="absolute right-3 top-3 " /> */}
             </div>
             <div className="grid grid-cols-2 gap-3 mt-3 sm:gap-6 sm:mt-6 xl:gap-8 xl:mt-8">
               {[LIST_IMAGES_DEMO[1], LIST_IMAGES_DEMO[2]].map((item, index) => {
@@ -408,15 +408,15 @@ const ProductDetailPage = () => {
 
         {/* DETAIL AND REVIEW */}
         <div className="mt-12 sm:mt-16 space-y-10 sm:space-y-16">
-          <div className="block xl:hidden">
+          {/* <div className="block xl:hidden">
             <Policy />
-          </div>
+          </div> */}
 
           {renderDetailSection()}
 
           <hr className="border-slate-200 dark:border-slate-700" />
 
-          {renderReviews()}
+          {/* {renderReviews()} */}
 
           <hr className="border-slate-200 dark:border-slate-700" />
 
