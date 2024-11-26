@@ -19,19 +19,25 @@ import SectionSliderProductCard from "@/components/SectionSliderProductCard";
 import detail1JPG from "@/images/products/detail1.jpg";
 import detail2JPG from "@/images/products/detail2.jpg";
 import detail3JPG from "@/images/products/detail3.jpg";
-import Policy from "./Policy";
+import Policy from ".././Policy";
 import ReviewItem from "@/components/ReviewItem";
 import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 import SectionPromo2 from "@/components/SectionPromo2";
-import ModalViewAllReviews from "./ModalViewAllReviews";
+import ModalViewAllReviews from ".././ModalViewAllReviews";
 import NotifyAddTocart from "@/components/NotifyAddTocart";
 import Image from "next/image";
 import AccordionInfo from "@/components/AccordionInfo";
+import { useRouter } from "next/navigation";
 
 const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 
-const ProductDetailPage = () => {
-  const { name, price, description, sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
+export default function ProductDetailPage ({
+    params,
+    }:{
+    params:{prodId:string};
+    }) {
+    const prodId =  params?.prodId;
+  const { name, price, description, sizes, variants, status, allOfSizes, image } = PRODUCTS[prodId];
   //
   const [variantActive, setVariantActive] = useState(0);
   const [sizeSelected, setSizeSelected] = useState(sizes ? sizes[0] : "");
@@ -199,9 +205,13 @@ const ProductDetailPage = () => {
   };
 
   const renderSectionContent = () => {
+    // console.log("prodId", prodId.prodId);
     return (
       <div className="space-y-7 2xl:space-y-8">
         {/* ---------- 1 HEADING ----------  */}
+        <div>
+            {prodId as string}
+        </div>
         <div>
           <h2 className="text-2xl sm:text-3xl font-semibold">
             {name}
@@ -427,4 +437,4 @@ const ProductDetailPage = () => {
   );
 };
 
-export default ProductDetailPage;
+// export default ProductDetailPage;
