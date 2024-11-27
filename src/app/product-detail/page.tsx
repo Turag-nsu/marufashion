@@ -27,10 +27,13 @@ import ModalViewAllReviews from "./ModalViewAllReviews";
 import NotifyAddTocart from "@/components/NotifyAddTocart";
 import Image from "next/image";
 import AccordionInfo from "@/components/AccordionInfo";
+import { useRouter } from "next/router";
 
 const LIST_IMAGES_DEMO = [detail1JPG, detail2JPG, detail3JPG];
 
 const ProductDetailPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
   const { name, price, description, sizes, variants, status, allOfSizes, image } = PRODUCTS[0];
   //
   const [variantActive, setVariantActive] = useState(0);

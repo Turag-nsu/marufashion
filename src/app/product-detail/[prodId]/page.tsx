@@ -209,9 +209,7 @@ export default function ProductDetailPage ({
     return (
       <div className="space-y-7 2xl:space-y-8">
         {/* ---------- 1 HEADING ----------  */}
-        <div>
-            {prodId as string}
-        </div>
+        
         <div>
           <h2 className="text-2xl sm:text-3xl font-semibold">
             {name}
