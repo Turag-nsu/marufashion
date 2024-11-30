@@ -12,13 +12,25 @@ export default function AddProductPage() {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   const handleSubmit = async (formData: any) => {
+    //images upload to array
+    const uploadImages = async (images: File[]) => {
+        const imagePaths = [];
+        for (const image of images) {
+            const imageResponse = await uploadImage(image);
+            imagePaths.push(imageResponse.filePath);
+        }
+        return imagePaths;
+    }
     try {
-      const imageResponse = await uploadImage(formData.image);
+      const imageResponse = await uploadImages(
+        [ formData.image, formData.subImage1, formData.subImage2]
+      );
       const newProduct = {
         name: formData.name,
+        category: formData.category,
         details: formData.details,
         price: formData.price,
-        image: imageResponse.filePath,
+        image: imageResponse,
       };
       const res = await createProduct(newProduct);
       if (res.success) {

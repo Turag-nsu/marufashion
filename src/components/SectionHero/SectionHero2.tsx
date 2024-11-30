@@ -138,7 +138,7 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
           <div
             className={`relative z-[1] w-full max-w-3xl space-y-8 sm:space-y-14 nc-SectionHero2Item__left`}
           >
-            <div className="space-y-5 sm:space-y-6">
+            <div className="space-y-5 sm:space-y-6 w-4/5">
               <span className="nc-SectionHero2Item__subheading block text-base md:text-xl text-slate-700 font-medium"
               style={{ 
                 // text shadow #E3FFE6
@@ -147,7 +147,7 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
               >
                 {item.subHeading}
               </span>
-              <h2 className={`nc-SectionHero2Item__heading font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900`}
+              <h2 className={`nc-SectionHero2Item__heading font-semibold text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl !leading-[114%] text-slate-900`}
                 style={{ 
                   // text shadow #E3FFE6
                   textShadow: "0px 4px 4px rgba(227, 255, 230, 1)"
@@ -158,7 +158,7 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
             </div>
 
             <ButtonPrimary
-              className="nc-SectionHero2Item__button dark:bg-slate-900"
+              className="nc-SectionHero2Item__button "
               sizeClass="py-3 px-6 sm:py-5 sm:px-9"
               href={item.btnLink}
             >

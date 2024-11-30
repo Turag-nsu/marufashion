@@ -16,7 +16,7 @@ import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 import { PRODUCTS, SPORT_PRODUCTS } from "@/data/data";
 import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 import SectionMagazine5 from "@/app/blog/SectionMagazine5";
-
+import VideoGallery from "@/components/VideoGallery";
 function PageHome() {
   return (
     <div className="nc-PageHome relative overflow-hidden">
@@ -62,18 +62,15 @@ function PageHome() {
 
         <SectionGridFeatureItems /> */}
 
-        {/* <div className="relative py-24 lg:py-32">
+        <div className="relative py-24 lg:py-32">
           <BackgroundSection />
           <div>
             <Heading rightDescText="From the Ciseco blog">
               The latest news
             </Heading>
-            <SectionMagazine5 />
-            <div className="flex mt-16 justify-center">
-              <ButtonSecondary>Show all blog articles</ButtonSecondary>
-            </div>
+            <VideoGallery />
           </div>
-        </div> */}
+        </div>
         {/* <SectionClientSay /> */}
       </div>
     </div>
